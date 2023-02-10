@@ -1,0 +1,55 @@
+
+.page-login {
+    background: linear-gradient(289.5deg, #2BA9E0 0%, #A821E7 53.65%, #8814F8 100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+
+    input[type=text], input[type=password] {
+        border: 1px solid #656565;
+    }
+
+    label {
+        font: 600 16px 'Inter';
+        color: #463F3F;
+        width: 55px;
+    }
+
+    .box-login {
+        background-color: #fff;
+        padding: 100px 70px 120px 70px;
+        margin-top: -100px;
+    }
+
+    .bem-vindo img {
+        width: 80px;
+    }
+
+    .bem-vindo {
+        font: 700 16px 'Inter';
+        color: #615B5B !important;
+        text-align: center;
+
+        margin-bottom: 42px;
+    }
+
+
+    .form-entrar {
+        text-align: right;
+    }
+
+    .invalido {
+        display: flex;
+        justify-content: center;
+        font: 700 14px 'Inter';
+        color: #f95d48;
+        letter-spacing: 1px;
+        position: relative;
+        top: 40px;
+        height: 50px;
+    }
+
+}
