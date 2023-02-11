@@ -4,7 +4,7 @@ USE catalogoFilmesDB;
 
 -- carga inicial usuário admin
 INSERT INTO tb_usuario (nm_usuario, ds_email, ds_senha)
-     VALUES ('admin', 'admin@admin.com.br', '1234');
+     VALUES ('admin', 'admin@admin.com.br', 'sadsvit_sudno');
 
 
 
@@ -14,8 +14,8 @@ select id_usuario 		id,
        nm_usuario		nome,
        ds_email			email
   from tb_usuario
- where ds_email 		= 'admin@admin.com.br'
-   and ds_senha			= '1234';
+ where ds_email 		= 'hello@stranger.com.br'
+   and ds_senha			= 'helo_stranger';
 
 
 
@@ -28,7 +28,7 @@ INSERT INTO tb_filme (id_usuario, nm_filme, ds_sinopse, vl_avaliacao, dt_lancame
 
 -- CSU02.1:: alterar a imagem
 UPDATE tb_filme 
-   SET img_filme     = '/storage/filme/asdfasdf.jp'
+   SET img_filme     = '/storage/filme/AS5jvUkz.svg'
  WHERE id_filme = 1;
 
 
@@ -36,7 +36,7 @@ UPDATE tb_filme
 -- CSU03:: alterar filme
 UPDATE tb_filme 
    SET nm_filme      = 'Harry Potter e a Pedra Filosofal',
-       ds_sinopse    = 'Filme bem tops',
+       ds_sinopse    = 'Filme do garoto que sobreviveu...',
        vl_avaliacao  = 9.5,
        dt_lancamento = '2010-05-03',
        bt_disponivel = true
@@ -54,11 +54,11 @@ DELETE FROM tb_filme
 
 -- CSU05:: consultar todos os filmes      
 SELECT id_filme			id,
-	  nm_filme			nome,
+	  nm_filme		nome,
        vl_avaliacao		avaliacao,
-       dt_lancamento	lancamento,
-       bt_disponivel	disponivel,
-       id_usuario        usuario
+       dt_lancamento	        lancamento,
+       bt_disponivel	        disponivel,
+       id_usuario               usuario
   FROM tb_filme;
   
 
@@ -66,11 +66,11 @@ SELECT id_filme			id,
 
 -- CSU06:: consultar filmes por nome
 SELECT id_filme			id,
-	  nm_filme			nome,
+	  nm_filme	        nome,
        vl_avaliacao		avaliacao,
-       dt_lancamento	lancamento,
-       bt_disponivel	disponivel,
-       id_usuario        usuario
+       dt_lancamento	        lancamento,
+       bt_disponivel	        disponivel,
+       id_usuario               usuario
   FROM tb_filme
  WHERE nm_filme			like '%a%';
  
